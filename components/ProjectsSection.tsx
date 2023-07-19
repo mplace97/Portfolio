@@ -13,14 +13,21 @@ const projects = [
     github: "https://github.com/mplace97/Algorithms-and-Data-Structures-master",
     link: "https://github.com/mplace97/Algorithms-and-Data-Structures-master",
   },
-
+  {
+    name: "Telegram Weather Bot",
+    description:
+      "This Telegram Bot takes user's location as text and then informs about its current weather-cast.",
+    image: "/bot.png",
+    github: "https://github.com/mplace97/WeatherBot",
+    link: "https://github.com/mplace97/WeatherBot",
+  },
 ]
 
 const ProjectsSection = () => {
   return (
     <section id="projects">
       <h1 className="my-10 text-center font-bold text-4xl">
-        Projects
+         Projects
         <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
       </h1>
 
