@@ -43,7 +43,7 @@ const AboutSection = () => {
             <p>
               I have a wide variety of hobbies and passions that keep me busy. 
               From piloting Drones, to sports, to traveling, to making YouTube videos, 
-              I'm always looking for new experiences and love to keep busy and learn new things.
+              I am always looking for new experiences and love to keep busy and learn new things.
             </p>
             <br />
             <p>
