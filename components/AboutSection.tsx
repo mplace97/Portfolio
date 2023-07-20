@@ -1,17 +1,24 @@
 import React from "react"
 import Image from "next/image"
 
+
 const skills = [
-  { skill: "HTML" },
-  { skill: "CSS" },
-  { skill: "Java" },
-  { skill: "SQL" },
-  { skill: "Python" },
-  { skill: "Spring" },
-  { skill: "Git" },
-  { skill: "GitHub" },
+
+  { skill: "Java", 
+    image: "java.png",
+    experience: "2 years",
+    technologies: "Spring Boot"
+  },
+  { skill: "SQL", 
+    image: "sql.png",
+    experience: "2 years",
+    technologies: "MySQL"
+  },  
 
 ]
+
+
+
 
 const AboutSection = () => {
   return (
@@ -58,21 +65,26 @@ const AboutSection = () => {
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
-            <h1 className="text-2xl font-bold mb-6">My Skills</h1>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-              {skills.map((item, idx) => {
-                return (
-                  <p
-                    key={idx}
-                    className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
-                  >
-                    {item.skill}
-                  </p>
-                )
-              })}
-            </div>
-
+          <h1 className="text-2xl font-bold mb-6">My Tech Stack</h1>
+          <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+            {skills.map((item, idx) => (
+              <div key={idx} className="flex items-center mb-8"> {/* Aggiunto mb-8 per spazio tra gli item */}
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={`Logo ${item.skill}`}
+                    className="w-8 h-8 mr-2 rounded-full"
+                  />
+                )}
+                <div>
+                  <p className="font-bold">{item.skill}</p>
+                  {item.technologies && <p className="text-gray-600">Technologies: {item.technologies}</p>}
+                  {item.experience && <p className="text-gray-600"><strong>Experience:</strong> {item.experience}</p>}
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
         </div>
       </div>
     </section>
