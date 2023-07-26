@@ -78,8 +78,8 @@ const AboutSection = () => {
                 )}
                 <div>
                   <p className="font-bold">{item.skill}</p>
-                  {item.technologies && <p className="text-gray-600">Technologies: {item.technologies}</p>}
-                  {item.experience && <p className="text-gray-600"><strong>Experience:</strong> {item.experience}</p>}
+                  {item.technologies && <p className="font-bold-600">Technologies: {item.technologies}</p>}
+                  {item.experience && <p className="font-bold-600"><strong>Experience:</strong> {item.experience}</p>}
                 </div>
               </div>
             ))}
