@@ -3,9 +3,9 @@ import React from 'react';
 function CareerTimeline() {
     const timelineData = [
       { date: "January 2022 - June 2023", position: "DevOps Developer",place:"STONE MOBILE S.r.l - Torino (TO) Sviluppatore Java DevOps " },
-      
+
   // Aggiungi altre voci del tuo percorso di carriera qui
-      // Aggiungi altre voci del tuo percorso di carriera qui
+
     ];
   
     return (
