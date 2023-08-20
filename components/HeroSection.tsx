@@ -3,7 +3,7 @@ import React from "react"
 import Image from "next/image"
 import { Link } from "react-scroll/modules"
 import { HiArrowDown } from "react-icons/hi"
-// this is a client component
+
 const HeroSection = () => {
   return (
     <section id="home">
