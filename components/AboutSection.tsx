@@ -1,18 +1,23 @@
 import React from "react"
 import Image from "next/image"
-
+import { FaJava } from 'react-icons/fa';
+import { BsFillDatabaseFill } from 'react-icons/bs';
 
 const skills = [
 
   { skill: "Java", 
-    image: "java.png",
+    image: <FaJava size={32} className="mr-2" />,
     experience: "2 years",
-    technologies: "Spring Boot"
+    technologies: "Spring Boot",
+    color: "border-green-500",
+    span_color: "green-500"
   },
   { skill: "SQL", 
-    image: "sql.png",
+    image: <BsFillDatabaseFill size={32} className="mr-2" />,
     experience: "2 years",
-    technologies: "MySQL"
+    technologies: "MySQL",
+    color: "border-red-500",
+    span_color: "red-500"
   },  
 
 ]
@@ -69,16 +74,14 @@ const AboutSection = () => {
           <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
             {skills.map((item, idx) => (
               <div key={idx} className="flex items-center mb-8"> {/* Aggiunto mb-8 per spazio tra gli item */}
-                {item.image && (
-                  <img
-                    src={item.image}
-                    alt={`Logo ${item.skill}`}
-                    className="w-8 h-8 mr-2 rounded-full"
-                  />
-                )}
+                <div className="flex items-center">
+                  {item.image} 
+                </div>
                 <div>
                   <p className="font-bold">{item.skill}</p>
-                  {item.technologies && <p className="font-bold-600">Technologies: {item.technologies}</p>}
+                  <div className={`border ${item.color} rounded-full py-1 px-3 inline-flex items-center`}>
+                  <span className={`text-sm font-semibold text-${item.span_color}`}>{item.technologies}</span>
+                  </div>
                   {item.experience && <p className="font-bold-600"><strong>Experience:</strong> {item.experience}</p>}
                 </div>
               </div>

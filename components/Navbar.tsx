@@ -2,6 +2,7 @@
 import React from "react"
 import { useState } from "react"
 import { Link } from "react-scroll/modules"
+import Link_ from 'next/link';
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
@@ -29,7 +30,6 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Career",
     page: "career",
   },
-   
 ]
 
 export default function Navbar() {
@@ -65,6 +65,7 @@ export default function Navbar() {
             }`}
           >
             <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            {/* <Link_ href="/prova">a</Link_> */} 
               {NAV_ITEMS.map((item, idx) => {
                 return (
                   <Link
@@ -84,6 +85,8 @@ export default function Navbar() {
                   </Link>
                 )
               })}
+              
+              
               {currentTheme === "dark" ? (
                 <button
                   onClick={() => setTheme("light")}
