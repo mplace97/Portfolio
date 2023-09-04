@@ -22,7 +22,7 @@ function TimelineItem({ title, description, date }: TimelineItemProps) {
           <div className="flex justify-between mb-4">
             <a href="https://www.stonemob.com/" className="font-medium text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm">{title}</a>
           </div>
-          <p className="text-gray-700 mb-6">{date}</p>
+          <p className="font-bold text-gray-700 mb-6">{date}</p>
           <p className="text-gray-700 mb-6">{description}</p>
           { /*<button type="button" className="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true">Preview</button> 
             <button type="button" className="inline-block px-3.5 py-1 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true">See demo</button>
