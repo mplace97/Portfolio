@@ -4,12 +4,11 @@ import React from 'react';
 interface TimelineItemProps {
   title: string;
   description: string;
-  date: string; 
+  date: string;
+  link: string;
 }
 
-function TimelineItem({ title, description, date }: TimelineItemProps) {
-
-
+function TimelineItem({ title, description, date, link }: TimelineItemProps) {
   return (
     <li className="border-l-2 border-blue-600">
       <div className="md:flex flex-start">
@@ -20,27 +19,32 @@ function TimelineItem({ title, description, date }: TimelineItemProps) {
         </div>
         <div className="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-md ml-6 mb-10">
           <div className="flex justify-between mb-4">
-            <a href="https://www.stonemob.com/" className="font-medium text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm">{title}</a>
+            <a href={link} className="font-medium text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm">{title}</a>
           </div>
           <p className="font-bold text-gray-700 mb-6">{date}</p>
           <p className="text-gray-700 mb-6">{description}</p>
-          { /*<button type="button" className="inline-block px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true">Preview</button> 
-            <button type="button" className="inline-block px-3.5 py-1 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true">See demo</button>
-          */}
         </div>
       </div>
     </li>
   );
 }
 
+
 function CareerTimeline() {
   const timelineData = [
+    {
+      title: 'Engineering Ingegneria Informatica Spa',
+      description: 'Software Developer',
+      date: 'September 2023',
+      link: 'https://www.eng.it/en/',
+    },    
     {
       title: 'STONE MOBILE S.r.l',
       description: 'Sviluppatore Java DevOps su progetto per Nexi S.p.A su gestione, modifica e creazione di workflow per prelievo allo sportello ATM Bancomat-Pagobancomat',
       date: 'January 2022 - June 2023',
+      link: 'https://www.stonemob.com',
     },
- 
+
  
     // Aggiungi altre voci del tuo percorso di carriera qui
   ];
@@ -58,6 +62,7 @@ function CareerTimeline() {
           title={item.title}
           date={item.date}
           description={item.description}
+          link={item.link}
         />
       ))}
     </ol>
