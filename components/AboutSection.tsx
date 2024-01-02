@@ -49,7 +49,7 @@ const AboutSection = () => {
             <br />
             <p>
               I graduated in computer science at the University of Turin in 2021 
-              and have been working in the sector ever since.
+              and I have been working in the sector ever since.
             </p>
             <br />
             <p>
@@ -65,7 +65,7 @@ const AboutSection = () => {
               </span>{" "}
               and that&#39;s what I strive to do, I have a passion for
               technology and a desire to always push the limits of what is
-              possible. I am excited to see where my career takes me and am
+              possible. I am excited to see where my career takes me and i am
               always open to new opportunities. 🙂
             </p>
           </div>
