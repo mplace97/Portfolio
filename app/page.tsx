@@ -2,6 +2,7 @@ import AboutSection from "@/components/AboutSection"
 import HeroSection from "@/components/HeroSection"
 import ProjectsSection from "@/components/ProjectsSection"
 import CareerTimeline from "@/components/CareerTimeline"
+import Contactus from "@/components/Contactus"
 
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
       <AboutSection />
       <CareerTimeline/>
       <ProjectsSection />
- 
+      <Contactus />
      
     </main>
   )
