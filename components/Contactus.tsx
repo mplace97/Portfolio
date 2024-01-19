@@ -36,7 +36,7 @@ function Contactus() {
   return (
 <section id="contacts">   
     <div className="min-h-screen flex items-center justify-center bg">
-    <div className="bg  p-8 rounded-md shadow-md w-full max-w-md">
+    <div className="border  p-8 rounded-md shadow-md w-full max-w-md">
         <h1 className="my-10 text-center font-bold text-4xl">
             Contact me 👇
             <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded" />
@@ -80,8 +80,10 @@ function Contactus() {
                 onChange={handleChange}
                 className="mt-1 p-2 w-full border rounded-md"
                 rows={4}
+                maxLength={200}
                 required // Aggiungo l'attributo required
                 placeholder="Your message" // Aggiungo l'attributo placeholder
+                style={{ resize: "none" }}
                 ></textarea>
             </div>
             <button
