@@ -11,8 +11,17 @@ function Contactus() {
     email: '',
     message: '',
   });
+  const [remainingChars, setRemainingChars] = useState(200);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    
+    const { name, value } = e.target;
+
+    if (name === 'message') {
+      const currentLength = value.length;
+      const charsLeft =currentLength;
+      setRemainingChars(charsLeft);
+    } 
     setForm({
       ...form,
       [e.target.name]: e.target.value,
@@ -27,6 +36,7 @@ function Contactus() {
       .then(() => {
         alert('Email inviata con successo!');
         setForm({ name: '', email: '', message: '' });
+        setRemainingChars(200); // Ripristina il numero massimo di caratteri 
       })
       .catch((error) => {
         alert('Si è verificato un errore: ' + error.text);
@@ -72,7 +82,7 @@ function Contactus() {
             </div>
             <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-600">
-                Messagge
+                Messagge (Max 200 characters)
                 </label>
                 <textarea
                 name="message"
@@ -85,12 +95,14 @@ function Contactus() {
                 placeholder="Your message" // Aggiungo l'attributo placeholder
                 style={{ resize: "none" }}
                 ></textarea>
+                <p className={`text-sm ${remainingChars === 200 ? 'text-red-500' : 'text-gray-500'}`}>
+                  {remainingChars}/200</p>
             </div>
             <button
                 type="submit"
                 className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                 >
-            Invia
+            Send
             </button>
         </form>
     </div>
