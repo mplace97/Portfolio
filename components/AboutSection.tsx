@@ -15,7 +15,7 @@ const skills = [
   { skill: "SQL", 
     image: <BsFillDatabaseFill size={32} className="mr-2" />,
     experience: "2 years",
-    technologies: "MySQL",
+    technologies: "Oracle",
     color: "border-red-500",
     span_color: "red-500"
   },  
