@@ -34,7 +34,7 @@ function CareerTimeline() {
   const timelineData = [
     {
       title: 'Engineering Ingegneria Informatica Spa',
-      description: 'Software Developer',
+      description: 'IT Consultant su progetto regionale della Regione Lombardia per la realizzazione del nuovo Sistema per la Gestione Digitale del Territorio (SGDT), integrato con il fascicolo sanitario elettronico',
       date: 'September 2023',
       link: 'https://www.eng.it/en/',
     },    

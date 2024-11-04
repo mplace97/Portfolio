@@ -7,14 +7,14 @@ const skills = [
 
   { skill: "Java", 
     image: <FaJava size={32} className="mr-2" />,
-    experience: "2 years",
+    experience: "3 years",
     technologies: "Spring Boot",
     color: "border-green-500",
     span_color: "green-500"
   },
   { skill: "SQL", 
     image: <BsFillDatabaseFill size={32} className="mr-2" />,
-    experience: "2 years",
+    experience: "3 years",
     technologies: "Oracle",
     color: "border-red-500",
     span_color: "red-500"
